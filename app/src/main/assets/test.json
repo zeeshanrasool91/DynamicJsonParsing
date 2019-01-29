@@ -1,0 +1,15 @@
+{
+    "data": {
+        "status_code": "101",
+        "feeds": {
+            "39": {
+                "name": "Ammy",
+                "address": "Dehradun"
+            },
+            "40": {
+                "name": "Aman",
+                "address": "Dehradun"
+            }
+        }
+    }
+}
