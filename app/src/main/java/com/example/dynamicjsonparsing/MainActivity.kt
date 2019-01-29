@@ -3,14 +3,13 @@ package com.example.dynamicjsonparsing
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.view.View
 import com.example.dynamicjsonparsing.model.DemoJson
 import com.example.dynamicjsonparsing.model.Feeds
-import com.fasterxml.jackson.databind.ObjectMapper
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,19 +33,8 @@ class MainActivity : AppCompatActivity() {
             for (value in feeds.values) {
                 println("Value = " + value.address + "-" + value.name)
             }
-
-            val mapper = ObjectMapper()
-            val map = mapper.readValue(data, Map::class.java)
-            println(map)
-
-            for (key in map.keys) {
-                println("Key = " + key!!)
-            }
-            // Iterating over values only
-            for (value in map.values) {
-                println("Value = $value")
-            }
         }
+
     }
 
     fun printMap(mp: kotlin.collections.Map<String, Feeds>) {
